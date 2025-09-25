@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <script data-ad-client="ca-pub-XXXXXXXXXXXX" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+  <meta name="robots" content="index, follow">
+<meta name="author" content="FarmerInfo">
+<meta name="keywords" content="agriculture, farming, seed calculator, milk calculator, crops guide, farm machines, Indian farmers">
+<meta name="language" content="EN">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FarmerInfo – Agriculture Toolkit</title>
+<meta name="description" content="Seed & milk calculators, major crop practices, agri-machine guide, About & Contact info.">
+<style>
+/* ---------- Global ---------- */
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f7f7f7;color:#222;line-height:1.6}
+a{text-decoration:none;color:#fff}
+h1,h2,h3{margin-top:0}
+.container{max-width:1100px;margin:auto;padding:20px}
+
+/* ---------- Header & Nav ---------- */
+header{background:#2d7d46;color:#fff;text-align:center;padding:25px 15px}
+header h1{margin:0;font-size:32px}
+header p{margin:8px 0 0}
+nav{background:#236337;text-align:center}
+nav a{display:inline-block;padding:12px 20px}
+nav a:hover{background:#1c4d2a}
+
+/* ---------- Cards & Layout ---------- */
+.card{background:#fff;border-radius:10px;padding:20px;margin-bottom:20px;
+      box-shadow:0 4px 12px rgba(0,0,0,.06)}
+input,select,button,textarea{width:100%;padding:10px;margin-top:6px;
+      border:1px solid #ccc;border-radius:6px;font-size:16px}
+button{background:#2d7d46;color:#fff;cursor:pointer}
+button:hover{background:#236337}
+.small{font-size:15px;color:#555}
+.machine-img{width:100%;max-width:320px;border-radius:8px;margin-top:10px}
+.grid{display:grid;gap:20px}
+.cols-2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+
+/* ---------- Crop Section ---------- */
+.crops{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.crop{background:#fff;border:1px solid #ddd;border-radius:8px;
+      overflow:hidden;box-shadow:0 2px 4px rgba(0,0,0,0.1)}
+.crop img{width:100%;height:180px;object-fit:cover}
+.crop h3{margin:0;padding:15px;font-size:20px;background:#f3f3f3}
+.crop p{padding:15px}
+
+/* ---------- Footer ---------- */
+footer{background:#eee;color:#555;padding:30px 20px;text-align:center;margin-top:40px}
+footer form{max-width:500px;margin:20px auto;text-align:left}
+footer label{display:block;margin-top:12px;font-weight:bold}
+footer input,footer textarea{width:100%;padding:8px;margin-top:4px;
+       border:1px solid #bbb;border-radius:6px}
+footer button{margin-top:12px;background:#2d7d46}
+
+/* ---------- Page Sections ---------- */
+section{margin-bottom:40px}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>FarmerInfo – All-in-One Agriculture Toolkit</h1>
+  <p>🌱 Seed & Milk Calculators • 🌾 Major Crops • 🚜 Agri Machines</p>
+</header>
+
+
+ <nav>
+  <a href="#calculators">Calculators</a>
+  <a href="#crops">Major Crops</a>
+  <a href="#machines">Machines</a>
+  <a href="#about">About Us</a>
+  <a href="#privacy">Privacy</a>
+  <a href="#terms">Terms</a>
+  <a href="#disclaimer">Disclaimer</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+
+
+<div class="container">
+
+<!-- ====== CALCULATORS ====== -->
+<section id="calculators" class="grid cols-2">
+  <div class="card">
+    <h2>🌱 Seed Calculator</h2>
+    <p class="small">Enter field area & seed rate to get total seed required (supports hectares, acre, bigha etc.).</p>
+    <label>Area (hectares)<input id="area" type="number" placeholder="e.g. 1.5"></label>
+    <label>Seed rate (kg/ha)<input id="rate" type="number" placeholder="e.g. 80"></label>
+    <button onclick="calcSeed()">Calculate</button>
+    <div id="seedOut" class="small"></div>
+  </div>
+
+  <div class="card">
+    <h2>🥛 Milk Income Calculator</h2>
+    <p class="small">Estimate daily & monthly income. Typical milk prices: Cow ₹40-50/L • Buffalo ₹55-65/L</p>
+    <label>Litres per day<input id="litres" type="number" placeholder="e.g. 15"></label>
+    <label>Price per litre (₹)<input id="price" type="number" placeholder="e.g. 45"></label>
+    <button onclick="calcMilk()">Compute</button>
+    <div id="milkOut" class="small"></div>
+  </div>
+</section>
+
+
+<!-- ====== MAJOR CROPS ====== -->
+<section id="crops">
+  <h2>🌾 Major Crops & Recommended Practices</h2>
+  <div class="crops">
+    <div class="crop">
+      <img src="https://raw.githubusercontent.com/Dharmik1010/webfarmer/main/wheat.png?auto=format&fit=crop&w=600&q=60" alt="Wheat">
+      <h3>Wheat</h3>
+      <p>Sow certified seeds in well-prepared soil with balanced nitrogen and phosphorus. Irrigate at key growth stages for high yields.</p>
+    </div>
+    <div class="crop">
+      <img src="https://raw.githubusercontent.com/Dharmik1010/webfarmer/main/rice.png?auto=format&fit=crop&w=600&q=60" alt="Rice">
+      <h3>Rice</h3>
+      <p>Ensure puddled soil and maintain 5–7 cm water depth. Use disease-resistant varieties and timely fertilizer application.</p>
+    </div>
+    <div class="crop">
+      <img src="https://raw.githubusercontent.com/Dharmik1010/webfarmer/main/maize.png?auto=format&fit=crop&w=600&q=60" alt="Maize">
+      <h3>Maize</h3>
+      <p>Plant during optimum temperature (18–27 °C) and use hybrid seeds. Apply nitrogen in split doses for better cob development.</p>
+    </div>
+    <div class="crop">
+      <img src="https://raw.githubusercontent.com/Dharmik1010/webfarmer/main/cotton.png?auto=format&fit=crop&w=600&q=60" alt="Cotton">
+      <h3>Cotton</h3>
+      <p>Choose pest-resistant varieties. Provide regular irrigation at flowering stage and monitor for bollworms and aphids.</p>
+    </div>
+    <div class="crop">
+      <img src="https://raw.githubusercontent.com/Dharmik1010/webfarmer/main/sugarcane.png?auto=format&fit=crop&w=600&q=60" alt="Sugarcane">
+      <h3>Sugarcane</h3>
+      <p>Plant disease-free setts in well-drained soil. Maintain adequate soil moisture and practice timely earthing-up.</p>
+    </div>
+    <div class="crop">
+      <img src="https://raw.githubusercontent.com/Dharmik1010/webfarmer/main/soybean.png?auto=format&fit=crop&w=600&q=60" alt="Soybean">
+      <h3>Soybean</h3>
+      <p>Inoculate seeds with Rhizobium culture. Maintain proper row spacing and avoid waterlogging to boost nodulation.</p>
+    </div>
+    <div class="crop">
+      <img src="https://raw.githubusercontent.com/Dharmik1010/webfarmer/main/barley.png?auto=format&fit=crop&w=600&q=60" alt="Barley">
+      <h3>Barley</h3>
+      <p>Sow in well-drained loamy soil. Apply adequate phosphorus and irrigate lightly at tillering and flowering stages.</p>
+    </div>
+    <div class="crop">
+      <img src="https://raw.githubusercontent.com/Dharmik1010/webfarmer/main/groundnut.png?auto=format&fit=crop&w=600&q=60" alt="Groundnut">
+      <h3>Groundnut</h3>
+      <p>Use bold, healthy seeds treated with fungicide. Provide gypsum at flowering to enhance pod filling.</p>
+    </div>
+    <div class="crop">
+      <img src="https://raw.githubusercontent.com/Dharmik1010/webfarmer/main/mustard.png?auto=format&fit=crop&w=600&q=60" alt="Mustard">
+      <h3>Mustard</h3>
+      <p>Maintain optimum plant population by thinning. Apply sulfur fertilizers to improve oil content and yield.</p>
+    </div>
+    <div class="crop">
+      <img src="https://raw.githubusercontent.com/Dharmik1010/webfarmer/main/papaya.png?auto=format&fit=crop&w=600&q=60" alt="Pulses">
+      <h3>Pulses</h3>
+      <p>Adopt crop rotation to enrich soil. Use biofertilizers and maintain timely irrigation during flowering and pod setting.</p>
+    </div>
+     <div class="crop">
+      <img src="https://raw.githubusercontent.com/Dharmik1010/webfarmer/main/potato.png?auto=format&fit=crop&w=600&q=60" alt="Potato">
+      <h3>Potato</h3>
+      <p>Use disease-free seed tubers. Maintain cool soil moisture and ridge up soil as plants grow for better tuber development.</p>
+    </div>
+    <div class="crop">
+      <img src="https://raw.githubusercontent.com/Dharmik1010/webfarmer/main/tomato.png?auto=format&fit=crop&w=600&q=60" alt="Tomato">
+      <h3>Tomato</h3>
+      <p>Plant healthy seedlings in well-drained soil. Provide staking, regular irrigation and timely pest management for high yields.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ====== MACHINES ====== -->
+<!-- ====== MACHINES ====== -->
+<section id="machines">
+  <div class="card">
+    <h2>🚜 Agri Machine Info</h2>
+    <div class="grid cols-2">
+      <div>
+        <h3>Tractor</h3>
+        <img class="machine-img" src="https://raw.githubusercontent.com/Dharmik1010/webfarmer/main/tractor.png?auto=format&fit=crop&w=600&q=60" alt="Tractor">
+        <p class="small">20–80 HP machine for ploughing, hauling and operating implements like rotavator or seed drill.</p>
+      </div>
+      <div>
+        <h3>Seed Drill</h3>
+        <img class="machine-img" src="https://raw.githubusercontent.com/Dharmik1010/webfarmer/main/seed_drill.png?auto=format&fit=crop&w=600&q=60" alt="Seed Drill">
+        <p class="small">Places seed at correct depth and spacing, saving seed and improving germination rate.</p>
+      </div>
+      <div>
+        <h3>Rotavator</h3>
+        <img class="machine-img" src="https://raw.githubusercontent.com/Dharmik1010/webfarmer/main/rotavator.png?auto=format&fit=crop&w=600&q=60" alt="Rotavator">
+        <p class="small">Power-driven tiller used for soil preparation, weed control and mixing organic matter.</p>
+      </div>
+      <div>
+        <h3>Power Sprayer</h3>
+        <img class="machine-img" src="https://raw.githubusercontent.com/Dharmik1010/webfarmer/main/sprayer.png?auto=format&fit=crop&w=600&q=60" alt="Power Sprayer">
+        <p class="small">Used for applying pesticides, herbicides or foliar nutrients efficiently across large areas.</p>
+      </div>
+      <div>
+        <h3>Harvester</h3>
+        <img class="machine-img" src="https://raw.githubusercontent.com/Dharmik1010/webfarmer/main/harvester.png?auto=format&fit=crop&w=600&q=60" alt="Harvester">
+        <p class="small">Used for harvesting crops efficiently, reducing labour costs and minimizing crop loss.</p>
+      </div>
+      <div>
+        <h3>Irrigation Pump</h3>
+        <img class="machine-img" src="https://raw.githubusercontent.com/Dharmik1010/webfarmer/main/water_pump.png?auto=format&fit=crop&w=600&q=60" alt="Irrigation Pump">
+        <p class="small">Provides water to fields through canals or sprinklers, ensuring timely irrigation for better yields.</p>
+      </div>
+      <div>
+        <h3>Sugarcane Planter</h3>
+        <img class="machine-img" src="https://raw.githubusercontent.com/Dharmik1010/webfarmer/main/sugarcane_planter.png?auto=format&fit=crop&w=600&q=60" alt="Sugarcane Planter">
+        <p class="small">Automates planting of sugarcane setts ensuring proper depth and spacing to enhance germination.</p>
+      </div>
+
+      <div>
+        <h3>Weeder</h3>
+        <img class="machine-img" src="https://raw.githubusercontent.com/Dharmik1010/webfarmer/main/weeder.png?auto=format&fit=crop&w=600&q=60" alt="Weeder">
+        <p class="small">Mechanical or power weeder helps control weeds between crop rows and reduces labour cost.</p>
+      </div>
+
+      <div>
+        <h3>Cotton Picker</h3>
+        <img class="machine-img" src="https://raw.githubusercontent.com/Dharmik1010/webfarmer/main/cotton_picker.png?auto=format&fit=crop&w=600&q=60" alt="Cotton Picker">
+        <p class="small">Harvests cotton efficiently, reducing manual labour and ensuring clean lint collection.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== ABOUT ====== -->
+
+
+<footer id="">
+<!-- ====== ABOUT US ====== -->
+<section id="about">
+  <div class="card">
+    <h2>About Us</h2>
+    <p>
+      Welcome to <strong>FarmerInfo</strong>, your free and comprehensive
+      agriculture toolkit designed for farmers, agri-entrepreneurs, and
+      anyone interested in modern farming practices.
+    </p>
+
+    <p>
+      Our mission is to empower farmers with accurate, practical, and
+      easy-to-use information. We provide tools like:
+      <ul>
+        <li>🌱 Seed Calculator – quickly estimate seed requirements for various crops</li>
+        <li>🥛 Milk Calculator – calculate daily and monthly income from dairy</li>
+        <li>🌾 Detailed crop guides – sowing, irrigation, fertilizers, and pest management</li>
+        <li>🚜 Agri Machine information – tractors, seed drills, harvesters, and more</li>
+      </ul>
+    </p>
+
+    <p>
+      FarmerInfo is community-driven and aims to make sustainable farming
+      accessible to everyone. All content is educational and based on
+      standard best practices in Indian agriculture.  
+      We regularly update our guides to reflect new methods, technology, and
+      research findings.
+    </p>
+
+    <p>
+      Our vision is to increase productivity, reduce costs, and support
+      informed decision-making for farmers of all scales.  
+      By using our platform, you join a growing community focused on
+      innovation and sustainable agriculture.
+    </p>
+  </div>
+</section>
+
+<section id="privacy">
+  <div class="card">
+    <h2>Privacy Policy</h2>
+    <p>
+      FarmerInfo values your privacy. We do not collect personal information unless
+      you voluntarily provide it (for example, via contact form). Any information
+      shared by you is used only to respond to your queries.
+    </p>
+    <p>
+      We use third-party services like Google Analytics/AdSense which may use cookies
+      to serve better ads and measure traffic. You can disable cookies in your browser
+      settings if you prefer.
+    </p>
+    <p>
+      We never sell or share your personal information with any third party. By using
+      this website, you agree to this policy.
+    </p>
+    <p class="small">Last updated: September 2025</p>
+  </div>
+</section>
+<section id="terms">
+  <div class="card">
+    <h2>Terms & Conditions</h2>
+    <p>
+      Welcome to <strong>FarmerInfo</strong>. By accessing and using this website,
+      you accept and agree to be bound by the following terms and conditions.  
+      Please read them carefully before using our services.
+    </p>
+
+    <h3>1. Use of Content</h3>
+    <p>
+      All calculators, crop guides, and machine information are provided for
+      <strong>educational and informational purposes only</strong>.  
+      We do not guarantee 100% accuracy or suitability for every situation.
+      You should consult an agricultural expert or local extension officer
+      before making major farming decisions.
+    </p>
+
+    <h3>2. User Responsibilities</h3>
+    <p>
+      You agree to use FarmerInfo responsibly and only for lawful purposes.
+      You must not:
+      <ul>
+        <li>Copy or republish content without permission</li>
+        <li>Use this website for fraudulent, illegal, or harmful activities</li>
+        <li>Disrupt the security or operation of the site</li>
+      </ul>
+    </p>
+
+    <h3>3. Limitation of Liability</h3>
+    <p>
+      FarmerInfo will not be responsible for any financial loss, crop loss,
+      or damage resulting from the use of our calculators, guides, or
+      recommendations.  
+      You understand that farming outcomes depend on multiple factors such as
+      climate, soil conditions, water availability, and management practices.
+    </p>
+
+    <h3>4. Third-Party Links & Ads</h3>
+    <p>
+      We may display links to external websites, tools, or advertisements
+      (such as Google AdSense). These third-party sites have their own terms
+      and privacy policies. FarmerInfo is <strong>not responsible</strong>
+      for their content, services, or data collection practices.
+    </p>
+
+    <h3>5. Intellectual Property</h3>
+    <p>
+      All content, logos, design, and resources on this website are the
+      property of FarmerInfo unless otherwise stated. Unauthorized copying,
+      reproduction, or distribution of our content is strictly prohibited.
+    </p>
+
+    <h3>6. Modifications</h3>
+    <p>
+      We may update these Terms & Conditions at any time without prior notice.
+      Users are encouraged to review this page periodically for any changes.
+    </p>
+
+    <h3>7. Governing Law</h3>
+    <p>
+      These Terms & Conditions shall be governed by and interpreted in
+      accordance with the laws of India. Any disputes shall be subject to the
+      jurisdiction of local courts in Gujarat, India.
+    </p>
+
+    <p class="small">Last updated: September 2025</p>
+  </div>
+</section>
+<section id="disclaimer">
+  <div class="card">
+    <h2>Disclaimer</h2>
+    <p>
+      The information provided on <strong>FarmerInfo</strong> is intended for
+      educational and informational purposes only. All calculators, crop guides,
+      and machinery details are based on general research and standard agricultural
+      practices. Actual results may vary depending on local conditions, climate,
+      soil type, crop variety, and farming practices.
+    </p>
+    <p>
+      FarmerInfo does not assume any responsibility or liability for losses,
+      damages, or other consequences that may arise from the use of this website,
+      calculators, or guides. Users should always consult with qualified
+      agricultural experts or local extension services before implementing any
+      new techniques or investments in farming operations.
+    </p>
+    <p>
+      Any links to third-party websites, products, or services are provided
+      solely for convenience and reference. FarmerInfo does not endorse,
+      guarantee, or take responsibility for content, products, or services
+      offered by these external sites.
+    </p>
+    <p>
+      By using this website, you acknowledge and agree that all usage is
+      at your own risk. Information may be updated periodically to reflect
+      new data and practices, but FarmerInfo does not guarantee completeness.
+    </p>
+    <p class="small">Last updated: September 2025</p>
+  </div>
+</section>
+
+  
+
+
+<!-- ====== FOOTER WITH CONTACT FORM ====== -->
+<footer>
+  <div class="card" id="contact">
+    <h2>Contact Us</h2>
+    <form onsubmit="event.preventDefault();this.innerHTML='<p style=\'color:green;font-weight:bold;\'>✅ Thank you! Your message has been submitted. We will get back to you shortly.</p>';">
+      <label for="name">Name</label>
+      <input id="name" type="text" placeholder="Your full name" required>
+
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="Your email address" required>
+
+      <label for="msg">Message</label>
+      <textarea id="msg" rows="4" placeholder="Write your message here..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+    <p>
+      <a href="#privacy">Privacy Policy</a> | 
+      <a href="#terms">Terms & Conditions</a> | 
+      <a href="#disclaimer">Disclaimer</a>
+    </p>
+    <p>© 2025 FarmerInfo. All rights reserved.</p>
+  </div>
+</footer>
+
+   
+
+    
+
+
+<script>
+function calcSeed(){
+  const a=parseFloat(document.getElementById('area').value)||0;
+  const r=parseFloat(document.getElementById('rate').value)||0;
+  document.getElementById('seedOut').textContent=
+    a&&r ? (a*r).toFixed(2)+' kg seed required' : 'Enter both values';
+}
+function calcMilk(){
+  const l=parseFloat(document.getElementById('litres').value)||0;
+  const p=parseFloat(document.getElementById('price').value)||0;
+  const d=l*p, m=d*30;
+  document.getElementById('milkOut').textContent=
+    l&&p ? 'Daily: ₹'+d.toFixed(2)+' • Monthly: ₹'+m.toFixed(2) : 'Enter both values';
+}
+</script>
+
+</body>
+</html>
